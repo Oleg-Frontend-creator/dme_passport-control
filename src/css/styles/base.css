@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Play", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #adadad;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 15px 0;
+}
+
+input:focus, select:focus, button:focus, textarea:focus {
+    outline: none;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+.bg-set, .bg-set-with-filter {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.reveal, .timeline-item, .cta-btn {
+    opacity: 0;
+    transform: translateY(18px) scale(.96);
+    transition: all .5s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: 0ms;
+}
+
+.section-title {
+    margin-bottom: 50px;
+
+    span {
+        color: #ffffff;
+        display: block;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        color: #ffffff;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 25px;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 70px;
+            background: #fff;
+            content: "";
+        }
+    }
+}

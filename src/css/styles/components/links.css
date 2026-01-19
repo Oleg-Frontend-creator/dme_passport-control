@@ -1,0 +1,144 @@
+.icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    transition: transform .25s ease,
+    color .25s ease,
+    background-color .25s ease,
+    box-shadow .25s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: inherit;
+        opacity: 0;
+        transform: scale(.9);
+        transition: opacity .25s ease, transform .25s ease;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 10px 22px rgba(0, 0, 0, .35);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        opacity: 0;
+        transform: scale(.6);
+        background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .25), transparent 60%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid rgba(255, 255, 255, .35);
+        outline-offset: 2px;
+    }
+
+    &:hover, &:focus-visible {
+        transform: translateY(-2px);
+        color: #fff;
+        background-color: rgba(255, 255, 255, .08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &:active::after {
+        opacity: 1;
+        animation: headerRipple .45s ease-out;
+    }
+}
+
+@keyframes headerRipple {
+    from {
+        transform: scale(.55);
+        opacity: .9;
+    }
+    to {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+.header-nav-link {
+    font-size: 15px;
+    font-family: "Play", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 12px;
+    color: rgba(255, 255, 255, .9);
+    text-decoration: none;
+    letter-spacing: .04em;
+    transition: color .2s ease, transform .2s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 6px;
+        height: 2px;
+
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: .9;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .95), transparent);
+        transition: transform .28s ease;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        opacity: 0;
+        transform: translateY(2px);
+        background: rgba(255, 255, 255, .06);
+        transition: opacity .25s ease, transform .25s ease;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid rgba(255, 255, 255, .25);
+        outline-offset: 2px;
+        border-radius: 10px;
+    }
+
+    &:hover, &:focus-visible {
+        color: #fff;
+        transform: translateY(-1px);
+
+        &::after {
+            transform: scaleX(1);
+        }
+
+        &::before {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &.is-active {
+        color: #fff;
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}

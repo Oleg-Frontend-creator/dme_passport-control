@@ -73,10 +73,3 @@
         transform: translateX(120%);
     }
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .cta-btn, .cta-btn::after {
-        animation: none !important;
-        transition: none !important;
-    }
-}

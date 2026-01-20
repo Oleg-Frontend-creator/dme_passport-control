@@ -94,7 +94,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages/index.html'),
             filename: 'index.html',
-            inject: 'body',
+            inject: false,
             chunks: ['css.index.critical', 'css.index.async', 'index.critical', 'index.async'],
             scriptLoading: 'defer',
             minify: isProd
@@ -105,7 +105,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages/advantages.html'),
             filename: 'advantages.html',
-            inject: 'body',
+            inject: false,
             chunks: ['css.advantages.critical', 'css.advantages.async', 'advantages.critical', 'advantages.async'],
             scriptLoading: 'defer',
             minify: isProd

@@ -283,12 +283,3 @@
         }
     }
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .timeline-item-card,
-    .timeline-item-card::before,
-    .timeline-item-card-text {
-        transition: none !important;
-        transform: none !important;
-    }
-}

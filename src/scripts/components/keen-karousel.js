@@ -65,7 +65,7 @@ export function initSlider({
             mode: "snap",
             ...sliderOptions
         },
-        [autoplayPlugin(4000), activeClassPlugin()]);
+        [autoplayPlugin(8000), activeClassPlugin()]);
 
     const count = sliderHTMLElement.querySelectorAll(".keen-slider__slide").length;
     paginationHTMLElement.innerHTML = Array.from({length: count}, (_, i) => {

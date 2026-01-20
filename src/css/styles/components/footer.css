@@ -455,25 +455,6 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-
-            .footer-map {
-                position: relative;
-                overflow: hidden;
-                filter: grayscale(1) brightness(1) invert(1);
-                width: 100%;
-
-                a {
-                    color: #eee;
-                    font-size: 12px;
-                    position: absolute;
-                    top: 14px;
-                }
-
-                iframe {
-                    width: 100%;
-                    position: relative;
-                }
-            }
         }
     }
 
@@ -504,21 +485,6 @@
     100% {
         transform: translateX(120%) skewX(-18deg);
         opacity: 0;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .feedback-btn, .feedback-btn::before, .feedback-btn::after {
-        transition: none !important;
-        animation: none !important;
-    }
-
-    .feedback-main-img {
-        transition: none;
-    }
-
-    .feedback-main-img:hover {
-        transform: none;
     }
 }
 

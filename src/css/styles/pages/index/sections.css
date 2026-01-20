@@ -59,6 +59,7 @@
 
                 .qr-card {
                     width: 100%;
+                    height: auto;
                     padding: 20px;
                     position: relative;
                     border-radius: 22px;
@@ -225,17 +226,6 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .js-reveal,
-    .advantages-item,
-    .advantages-item::before,
-    .advantages-item-title::after,
-    .advantages-item-icon::after,
-    .qr-card::after {
-        transition: none !important;
-        animation: none !important;
-    }
-}
 
 .airport {
     background: #4a4654;
@@ -247,6 +237,7 @@
         gap: 10px;
 
         .airport-gallery-item {
+            height: 311px;
             position: relative;
             overflow: hidden;
             border-radius: 14px;
@@ -322,6 +313,7 @@
             &.large {
                 grid-column: 5 / 7;
                 grid-row: 1 / 3;
+                height: 632px;
             }
 
             .airport-gallery-item-container {
@@ -513,17 +505,6 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .requirements-item,
-    .requirements-item::before,
-    .requirements-item::after,
-    .requirements-item-number,
-    .requirements-item-text {
-        transition: none !important;
-        animation: none !important;
-    }
-}
-
 @media screen and (max-width: 1400px) {
     .airport .airport-gallery .airport-gallery-item .airport-gallery-item-container {
         padding: 15px 20px;
@@ -631,7 +612,7 @@
                 padding: 0 15px;
 
                 .advantages-item {
-                    h4 {
+                    .advantages-item-title {
                         max-width: 430px;
                     }
                 }

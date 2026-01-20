@@ -34,6 +34,8 @@ function unlockScroll() {
 export function openModal(id) {
     const modal = document.getElementById(`modal-${id}`);
     if (!modal) return;
+    modal.removeAttribute('hidden');
+    modal.setAttribute('aria-hidden', 'false');
 
     if (activeModal) closeModal();
 

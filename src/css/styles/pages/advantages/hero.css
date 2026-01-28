@@ -143,7 +143,7 @@
             .keen-slider {
                 .keen-slider__slide {
                     height: auto;
-                    padding-top: 5px;
+                    padding-bottom: 10px;
 
                     &:hover {
                         .card {
@@ -156,7 +156,6 @@
                     .card {
                         display: flex;
                         flex-flow: wrap column;
-                        height: auto;
                         min-height: 385px;
                         text-align: center;
                         font-size: 18px;
@@ -166,6 +165,7 @@
                         backdrop-filter: blur(8px);
                         color: #f3f3f3;
                         transform: translateY(0);
+                        height: 100%;
 
                         .card-title {
                             height: auto;

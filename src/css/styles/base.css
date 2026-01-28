@@ -40,7 +40,7 @@ a:hover, a:focus {
 
 .reveal, .timeline-item, .cta-btn {
     opacity: 0;
-    transform: translateY(18px) scale(.96);
+    transform: translateY(24px) scale(.98);
     transition: all .5s ease;
     transition-delay: var(--reveal-delay, 0ms);
     will-change: opacity, transform;

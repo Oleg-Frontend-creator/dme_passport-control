@@ -79,6 +79,8 @@
 
         .cta-btn {
             margin-bottom: 20px;
+            opacity: 1;
+            transform: scale(1) translateY(6px);
         }
 
         .modal-body-text {

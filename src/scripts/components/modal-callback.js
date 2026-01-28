@@ -159,7 +159,7 @@ export function initAjaxForms() {
         const submitBtn = form.querySelector('[type="submit"]');
         submitBtn?.setAttribute("disabled", "disabled");
 
-        const endpoint = form.dataset.endpoint || "mail-callback.php";
+        const endpoint = form.dataset.endpoint || "php/mail-callback.php";
         const successModal = form.dataset.successModal || "thanks";
         const errorModal = form.dataset.errorModal || "error";
 

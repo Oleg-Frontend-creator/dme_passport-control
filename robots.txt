@@ -1,0 +1,23 @@
+# Разрешаем всем хорошим ботам
+User-agent: *
+Allow: /
+
+# Запрещаем парсить контент для обучения AI моделей (чтобы текст вакансий не украли)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Разрешаем поисковому боту OpenAI (чтобы сайт появлялся в ChatGPT Search)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Карта сайта
+Sitemap: https://dmdpassport.ru/sitemap.xml

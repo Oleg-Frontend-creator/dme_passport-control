@@ -9,6 +9,10 @@ if ($_SERVER ["REQUEST_METHOD"] = "POST") {
     // создаем переменную с содержанием письма
     $content = $name . ' оставил заявку на звонок по поводу трудоустройства на должность контролера ПК.' . 'Его телефон: ' . $phone .', его email: ' . $email;
 
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
+
     // Первый параметр - кому отправляем письмо, второй - тема письма, третий - содержание
     $success = mail("dmd_passport_control@mail.ru", 'Заявка на обратный звонок', $content);
 

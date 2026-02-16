@@ -8,7 +8,11 @@ async function postForm(url, dataObj) {
     const body = new URLSearchParams(dataObj);
     const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded; text/html; charset=UTF-8",
+            "Content-Transfer-Encoding": "8bit",
+            "MIME-Version": "1.0"
+        },
         body,
     });
     if (!res.ok) throw new Error("Request failed");
